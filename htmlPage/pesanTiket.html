@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Halaman Detail Tiket/Paket</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#16a34a", // New green primary color
+                        "background-light": "#f7fafc",
+                        "background-dark": "#1a202c",
+                    },
+                    fontFamily: {
+                        display: ["Plus Jakarta Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="sticky top-0 z-50 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800">
+<div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-4 text-slate-900 dark:text-slate-50">
+<div class="w-8 h-8 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 0L48 24L24 48L0 24L24 0Z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M12 21H36L24 9L12 21Z" fill="#F7FAFC"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold tracking-[-0.015em]">Wisata Surabaya</h2>
+</div>
+<nav class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8">
+<a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary" href="#">Destinasi</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary" href="#">Promosi</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary" href="#">Tiket Saya</a>
+</nav>
+<div class="flex items-center">
+<a class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-transparent text-sm font-bold leading-normal tracking-[0.015em] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800" href="#">
+<span class="truncate">Bantuan</span>
+</a>
+</div>
+</div>
+</div>
+</header>
+<main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+<div class="flex flex-wrap gap-2 pb-6">
+<a class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal hover:text-primary" href="#">Beranda</a>
+<span class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">/</span>
+<a class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal hover:text-primary" href="#">Destinasi</a>
+<span class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">/</span>
+<span class="text-slate-900 dark:text-slate-50 text-sm font-medium leading-normal">Paket Wisata Alam Surabaya</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-5 gap-8 xl:gap-12">
+<div class="lg:col-span-3">
+<div class="flex flex-col gap-4">
+<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden rounded-xl aspect-[4/3]" data-alt="A scenic view of a beautiful waterfall in a lush green forest." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAYxKoKWfSYDs5zuM4SkzpCdkWl8P_o08cs2wBN4VRDYVf8yO6YO0JAVL4jgyRZS-u9LL47nMuEE4IaG3zpHpsm-ekCjvKsDDn2CxxpFDctMdYZNEv-5u-h0cwUMBju0zmlUWc3yMZzrsdbdxvnYCCSJVWkKz_49_uLxzMCvhs8xHsY24nwtS3xp25FwZEwoHKFaXmCJ8LYBziib4ro6nsZGIe2skHgmQnu8xVN-A7qgv567sIYfyth48r2vyDz3bNh49i4aOYzgx4");'></div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="A close-up of a unique local flower." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBmZpd7Hy3OPFdcIgUg3BjZ69OCQEzyjvUAf1TlIlyNYQJBlSFp0mOG4c2OseBFTGQdsqbx0I8N-0OfyjwK8w0MtCkUU7HSr3bSHEwcqokApwDywwDo7nCm15r62-mC5qJGx2hJSGKfGD0q4ZXITQ3cubh74FuUEkBEWgiM4F2YExRjJXWsRw0OUaprzUfxQPy1OCGAnvXobwKGILmwy8yIB8xAptGkOM8ZBMtrE6SBPd-Q-tB2QdGcPwUFk5_n_Xap4OpleooC7HI");'></div>
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Tourists walking on a trail in the mountains." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXoPbPldRu9sUAkBH7--03iqgY3HVe7Rk3bi3vpEnZY5eZaWZbCSXRbwYiFkRz69_EQJD56d1-bQyR-510_LIwhUi0BbQzQTFaKsSijSQUxmwMV10WDHoPwWbOJDZbcrSJ0SoW07DVhLPN2guwSIDoZXkJa9e0IiOTsL4vjm5GJxDKg8hvmOSlO39uxHl44ULYz_1UAFdi-H3Bdu3pGLYGRkBmuuTYf4OBq_L_wHXFdz-bJqBeiZ6H66tu8fF7w7ldiFBBOCwqSqQ");'></div>
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="A panoramic view of the city skyline from a high vantage point." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBCE3eJ_AnYhM92pXVOxOmARt0t7n8J4bja3RMozBXSEggXCV_c_BhwEu4cIzh4WllkKgaxRj2Y1Bvt8vIw8sHC9xl7OjRRPH8xm9PMmJblW7gMNXh9KSC2ThCz07yZ8vIxk3wV-89FB5dYWFKswjTQCdSocYJybmjA1zRVVDKQs7b_eGZ1u1bfWn8L8FTbOtVvf34vd_ZLpUhnzNxGdxa3PFneQq0skanvEhxIyFA1ikwQhml8AffHkF3beKZo8j2r0qYfM0JoBzc");'></div>
+<div class="relative w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="A group of people enjoying a traditional meal." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA3IVCcAySVqHmVOQq4-mLWB1kUPhAlVdCTm-fkSD2mqUj_KtHXwNWR0phZa-oqzxkr0BOmSEV-t-XBHFJsL6kcPNNEt__LbzSk8wbx2odgT3-znBokTh3Ur9LBMdonKaG_N17j3SpXlcw0lr0PTEUOgWyVliJjSC3MisxWrfBvU6yGDPLoER-AXOSLphLrEs86PaTbQaZkCnzHa7SsAm5oyA_AMWBCvgU4yUYEWfmtuobJFVATWrQin9GLg055J5TTLxgRxrWL-pc");'>
+<div class="absolute inset-0 bg-black/50 flex items-center justify-center rounded-lg">
+<span class="text-white font-bold text-lg">+12</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-2">
+<div class="sticky top-24">
+<div class="flex min-w-72 flex-col gap-5 bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex flex-col gap-2">
+<p class="text-slate-900 dark:text-slate-50 text-3xl font-bold leading-tight tracking-tight">Paket Wisata Alam Surabaya Terbaik</p>
+<div class="flex items-center gap-2">
+<div class="flex items-center text-yellow-500">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal">(123 Ulasan)</p>
+</div>
+</div>
+<div class="w-full h-px bg-slate-200 dark:border-slate-800"></div>
+<div class="flex flex-col gap-4">
+<div class="flex flex-col">
+<span class="text-sm text-slate-500 dark:text-slate-400">Mulai dari</span>
+<span class="text-3xl font-extrabold text-primary">Rp 750.000<span class="text-base font-medium text-slate-500 dark:text-slate-400"> / orang</span></span>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="date-picker">Pilih Tanggal</label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark focus:border-primary focus:ring-primary/50 text-slate-800 dark:text-slate-200" id="date-picker" type="date" value="2024-10-26"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="pax-selector">Jumlah Orang</label>
+<select class="w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark focus:border-primary focus:ring-primary/50 text-slate-800 dark:text-slate-200" id="pax-selector">
+<option>1 Orang</option>
+<option selected="">2 Orang</option>
+<option>3 Orang</option>
+<option>4 Orang</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-3 pt-2">
+<button class="w-full flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary text-white text-base font-bold tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Pesan Sekarang</span>
+</button>
+<button class="w-full flex min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-4 bg-primary/10 text-primary text-base font-bold tracking-[0.015em] hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-xl">favorite</span>
+<span class="truncate">Tambah ke Wishlist</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 lg:mt-16">
+<div class="border-b border-slate-200 dark:border-slate-800">
+<nav aria-label="Tabs" class="-mb-px flex space-x-8">
+<a class="border-primary text-primary whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" href="#">Deskripsi</a>
+<a class="border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300 dark:text-slate-400 dark:hover:text-slate-300 dark:hover:border-slate-700 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" href="#">Ulasan Pelanggan</a>
+<a class="border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300 dark:text-slate-400 dark:hover:text-slate-300 dark:hover:border-slate-700 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" href="#">Lokasi</a>
+</nav>
+</div>
+<div class="py-10 prose prose-slate max-w-none dark:prose-invert prose-p:text-slate-600 dark:prose-p:text-slate-400 prose-h3:text-slate-800 dark:prose-h3:text-slate-200 prose-li:text-slate-600 dark:prose-li:text-slate-400">
+<h3>Tentang Paket Wisata Ini</h3>
+<p>Jelajahi keindahan alam tersembunyi di sekitar Surabaya dengan paket wisata eksklusif kami. Paket ini dirancang khusus bagi Anda yang ingin melepaskan penat dari hiruk pikuk kota dan menyatu dengan alam. Anda akan kami ajak mengunjungi air terjun yang megah, berjalan-jalan di tengah hutan pinus yang sejuk, dan menikmati pemandangan matahari terbenam dari puncak bukit yang menakjubkan.</p>
+<p>Paket ini sudah termasuk transportasi pribadi yang nyaman, pemandu wisata profesional yang ramah, tiket masuk ke semua objek wisata, serta makan siang dengan menu khas lokal yang lezat. Kami memastikan setiap detail perjalanan Anda terencana dengan baik untuk memberikan pengalaman liburan yang tak terlupakan.</p>
+<h3>Highlight</h3>
+<ul>
+<li>Mengunjungi Air Terjun Madakaripura yang legendaris.</li>
+<li>Trekking santai di kawasan Hutan Bambu Keputih.</li>
+<li>Menikmati panorama kota dari Bukit Jaddih.</li>
+<li>Transportasi PP dari hotel Anda di Surabaya.</li>
+<li>Pemandu wisata berpengalaman dan makan siang termasuk.</li>
+</ul>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

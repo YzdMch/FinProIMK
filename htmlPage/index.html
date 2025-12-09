@@ -1,38 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample HTML Page</title>
-    <link rel="stylesheet" href="styles.css">
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Halaman Beranda &amp; Pencarian - Tiket Wisata Surabaya</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#10B981",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
 </head>
-<body>
-    <header>
-        <h1>Welcome to My Sample Page</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#section1">Section 1</a></li>
-            <li><a href="#section2">Section 2</a></li>
-            <li><a href="#section3">Section 3</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section id="section1">
-            <h2>Section 1</h2>
-            <p>This is the first section of the sample page.</p>
-        </section>
-        <section id="section2">
-            <h2>Section 2</h2>
-            <p>This is the second section of the sample page.</p>
-        </section>
-        <section id="section3">
-            <h2>Section 3</h2>
-            <p>This is the third section of the sample page.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Sample Page. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-50 w-full border-b border-gray-200/50 bg-background-light/80 backdrop-blur-sm dark:border-gray-800/50 dark:bg-background-dark/80">
+<div class="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+<div class="flex flex-1 items-center justify-start gap-4 py-4 text-gray-900 dark:text-white">
+<svg class="h-8 w-8 text-primary" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 17.5 3 12l11.5-5.5L21 12l-6.5 5.5z"></path>
+<path d="m3 12 6 6"></path>
+<path d="m21 12-6-6"></path>
+</svg>
+<h2 class="text-lg font-bold text-gray-900 dark:text-white">Tiket Wisata Surabaya</h2>
+</div>
+<nav class="hidden flex-1 items-center justify-center gap-9 md:flex">
+<a class="text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#">Destinasi</a>
+<a class="text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#">Promosi</a>
+<a class="text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#">Tiket Saya</a>
+</nav>
+<div class="flex flex-1 items-center justify-end">
+<a class="text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#">Bantuan</a>
+</div>
+</div>
+</header>
+<main>
+<section class="relative flex min-h-[560px] w-full items-center justify-center bg-cover bg-center py-16 text-center text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCRcqvna4Xf7mFqJxaCZKlIegaPPD9UVgVSyDidCzbJlCz6gwpnGRzqd6MjLiVsemMnznXZ6CifIxXgPZo05bRVnCpgq60akR-uy4HFB7hnCoQHFqWTbrxpG4H1Fj6dx1RCMlonXfa018zELJK45qaKw2cgxVl5oZiOFVNyx67WHeoeMNpK3kj7xSGofOP8o5bc6mznKM615FPOOypc8QJyuKd6Yed8pHLlyjdJw4cx1sJB8LMZ3jKXu_IbpQS7caMhHvHiPAS7qM');">
+<div class="container mx-auto max-w-4xl px-4">
+<h1 class="text-4xl font-black leading-tight tracking-tight md:text-6xl">Jelajahi Pesona Surabaya</h1>
+<p class="mt-4 text-lg font-light text-gray-200 md:text-xl">Temukan dan pesan atraksi serta tur terbaik di Kota Pahlawan.</p>
+<div class="mt-10 rounded-xl bg-white/10 p-4 backdrop-blur-md">
+<div class="grid grid-cols-1 items-center gap-4 rounded-lg bg-white dark:bg-gray-900 md:grid-cols-12 md:p-2">
+<label class="col-span-12 flex h-14 w-full items-center px-4 md:col-span-5">
+<span class="material-symbols-outlined text-gray-400">search</span>
+<input class="w-full border-0 bg-transparent pl-2 text-gray-800 placeholder-gray-500 focus:ring-0 dark:text-gray-200 dark:placeholder-gray-400" placeholder="Destinasi atau Aktivitas" type="text"/>
+</label>
+<div class="hidden h-8 w-px bg-gray-200 dark:bg-gray-700 md:block"></div>
+<label class="col-span-12 flex h-14 w-full items-center px-4 md:col-span-3">
+<span class="material-symbols-outlined text-gray-400">calendar_today</span>
+<input class="w-full border-0 bg-transparent pl-2 text-gray-800 placeholder-gray-500 focus:ring-0 dark:text-gray-200 dark:placeholder-gray-400" onblur="(this.type='text')" onfocus="(this.type='date')" placeholder="Pilih Tanggal" type="text"/>
+</label>
+<div class="hidden h-8 w-px bg-gray-200 dark:bg-gray-700 md:block"></div>
+<label class="col-span-12 flex h-14 w-full items-center px-4 md:col-span-2">
+<span class="material-symbols-outlined text-gray-400">group</span>
+<input class="w-full border-0 bg-transparent pl-2 text-gray-800 placeholder-gray-500 focus:ring-0 dark:text-gray-200 dark:placeholder-gray-400" min="1" placeholder="Jumlah Orang" type="number"/>
+</label>
+<button class="col-span-12 flex h-12 w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary text-base font-bold text-white hover:bg-primary/90 md:col-span-1">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
+<section>
+<h2 class="px-4 pb-4 pt-5 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Penawaran Populer</h2>
+<div class="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="ml-4 w-4 flex-shrink-0 snap-center sm:ml-0 sm:w-0"></div>
+<div class="flex h-full w-72 flex-shrink-0 snap-center flex-col overflow-hidden rounded-xl border border-gray-200/80 bg-white shadow-sm dark:border-gray-800/80 dark:bg-gray-900/50">
+<div class="aspect-video w-full bg-cover bg-center" data-alt="Surabaya Zoo entrance with lush greenery" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMjz6bpOHNxYB-_70Nw87VfWC5tc-LRU25EjNIbuvzkw9LHOP3KkvpnAoKnrhzC3kPz86rTG9KlyS3zenGPNF1sunlHJV2EAN0fd-mo0NwPBiuZys59M5xUeUust72eE-ef36zEXI6s9sQ368ulGUR8_duKSb_nYe1mf0-f2nBwYDo4uRcWSFTyfOGcmlnaejqIaPayZv-VKvcWZE00TO7-7Y3gZzPr-ELhBqzbN9-n6j7XENRF5ps78Wx_UecoQLl-SyiWdUs67Q');"></div>
+<div class="flex flex-1 flex-col justify-between p-4">
+<div>
+<p class="font-medium text-gray-900 dark:text-white">Tiket Kebun Binatang Surabaya</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Mulai dari Rp 25.000</p>
+</div>
+<button class="mt-4 flex h-10 w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary/20 text-sm font-bold text-primary hover:bg-primary/30 dark:bg-primary/30 dark:hover:bg-primary/40">
+<span class="truncate">Lihat Penawaran</span>
+</button>
+</div>
+</div>
+<div class="flex h-full w-72 flex-shrink-0 snap-center flex-col overflow-hidden rounded-xl border border-gray-200/80 bg-white shadow-sm dark:border-gray-800/80 dark:bg-gray-900/50">
+<div class="aspect-video w-full bg-cover bg-center" data-alt="Suramadu Bridge illuminated at night with city lights in background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAbK8iWYoTUSF49PHr0ogsjWACIBalbBFypAJJiToXNn80Y1E0xI-W_WLe_CrGw4KdkKuM82EYYcbVn_cWG11MHFO_hGfT6nmCUp-Yxy01E7wOoK9_icLDNXyJgQVqyqKHyky3YRiadvji4JHXa8_jRl8m3URDt24j-YC_DOaJRYO3yZ4NI3OcODNKTSYhr7MFJZfun6D_XWYZkzyVsTVfeAvk1ExRq5D5I_nBbzCenGOOJ78yo1ceg3Y2vIbpoLf2rLpNKE6nivbo');"></div>
+<div class="flex flex-1 flex-col justify-between p-4">
+<div>
+<p class="font-medium text-gray-900 dark:text-white">Tur Malam Jembatan Suramadu</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Mulai dari Rp 75.000</p>
+</div>
+<button class="mt-4 flex h-10 w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary/20 text-sm font-bold text-primary hover:bg-primary/30 dark:bg-primary/30 dark:hover:bg-primary/40">
+<span class="truncate">Lihat Penawaran</span>
+</button>
+</div>
+</div>
+<div class="flex h-full w-72 flex-shrink-0 snap-center flex-col overflow-hidden rounded-xl border border-gray-200/80 bg-white shadow-sm dark:border-gray-800/80 dark:bg-gray-900/50">
+<div class="aspect-video w-full bg-cover bg-center" data-alt="Colonial-style architecture of the House of Sampoerna Museum" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDdaznA9ricHx9a38hSn9Kw0isvFqCs_2uFMofs5R7rfqfb3cJDnuMoKuhxxvgTYdtYTd8OEFybUncekhWWT6pKLoC6xNEcr6OMcFLzUYQPVuWfDiv2xreVCLl9Ntsh_w3UINNhPN2F6rIpN4CSCKhjfO95wEaawNbHnSVmlylRvDIljGQvLvfPu4cwFjp0HkN-SgOUgGuS0dLSADCHzucC17dhhlfVDHmkiPCvUtzadHu0Egow0nAwCJzz_PIkGzByDcMXDvhiLnU');"></div>
+<div class="flex flex-1 flex-col justify-between p-4">
+<div>
+<p class="font-medium text-gray-900 dark:text-white">Museum House of Sampoerna</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Gratis</p>
+</div>
+<button class="mt-4 flex h-10 w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary/20 text-sm font-bold text-primary hover:bg-primary/30 dark:bg-primary/30 dark:hover:bg-primary/40">
+<span class="truncate">Lihat Penawaran</span>
+</button>
+</div>
+</div>
+<div class="flex h-full w-72 flex-shrink-0 snap-center flex-col overflow-hidden rounded-xl border border-gray-200/80 bg-white shadow-sm dark:border-gray-800/80 dark:bg-gray-900/50">
+<div class="aspect-video w-full bg-cover bg-center" data-alt="Exciting water slides at Ciputra Waterpark on a sunny day" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBR5kapGimpG2kxI3n5G111Ufhvvojk52ZyaYMTsDfi7F7CTPAd6gtbiYE4zf_caLo4RRYN5iGtd6Pc7U2BTN8JwTwiROZ3Y1yNBaSJbdFa2BzZz4VKbfTBymCrnEjFAZxlLaS1bEmBzAHzCJG_XbpV6Gz9ZAl9RP4kleIcoU3gqOU52ZJ7gJeHInBzTccGiYHV1BwZPM8uy-bO7YqJD_rguoTlWfUfNXBhIQSl2tfYojPBIkqpYoxWkBEStiFiYbyaqkrF5ngWrzM');"></div>
+<div class="flex flex-1 flex-col justify-between p-4">
+<div>
+<p class="font-medium text-gray-900 dark:text-white">Tiket Ciputra Waterpark</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Mulai dari Rp 100.000</p>
+</div>
+<button class="mt-4 flex h-10 w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary/20 text-sm font-bold text-primary hover:bg-primary/30 dark:bg-primary/30 dark:hover:bg-primary/40">
+<span class="truncate">Lihat Penawaran</span>
+</button>
+</div>
+</div>
+<div class="mr-4 w-4 flex-shrink-0 snap-center sm:mr-0 sm:w-0"></div>
+</div>
+</section>
+<section class="mt-10 lg:mt-16">
+<h2 class="px-4 pb-4 pt-5 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Jelajahi Berdasarkan Kategori</h2>
+<div class="grid grid-cols-2 gap-4 px-4 sm:grid-cols-2 md:grid-cols-4">
+<div class="group relative flex h-40 items-end justify-start overflow-hidden rounded-xl">
+<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCRcqvna4Xf7mFqJxaCZKlIegaPPD9UVgVSyDidCzbJlCz6gwpnGRzqd6MjLiVsemMnznXZ6CifIxXgPZo05bRVnCpgq60akR-uy4HFB7hnCoQHFqWTbrxpG4H1Fj6dx1RCMlonXfa018zELJK45qaKw2cgxVl5oZiOFVNyx67WHeoeMNpK3kj7xSGofOP8o5bc6mznKM615FPOOypc8QJyuKd6Yed8pHLlyjdJw4cx1sJB8LMZ3jKXu_IbpQS7caMhHvHiPAS7qM')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<h3 class="relative p-4 text-lg font-bold text-white">Museum</h3>
+</div>
+<div class="group relative flex h-40 items-end justify-start overflow-hidden rounded-xl">
+<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCRcqvna4Xf7mFqJxaCZKlIegaPPD9UVgVSyDidCzbJlCz6gwpnGRzqd6MjLiVsemMnznXZ6CifIxXgPZo05bRVnCpgq60akR-uy4HFB7hnCoQHFqWTbrxpG4H1Fj6dx1RCMlonXfa018zELJK45qaKw2cgxVl5oZiOFVNyx67WHeoeMNpK3kj7xSGofOP8o5bc6mznKM615FPOOypc8QJyuKd6Yed8pHLlyjdJw4cx1sJB8LMZ3jKXu_IbpQS7caMhHvHiPAS7qM')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<h3 class="relative p-4 text-lg font-bold text-white">Alam</h3>
+</div>
+<div class="group relative flex h-40 items-end justify-start overflow-hidden rounded-xl">
+<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCRcqvna4Xf7mFqJxaCZKlIegaPPD9UVgVSyDidCzbJlCz6gwpnGRzqd6MjLiVsemMnznXZ6CifIxXgPZo05bRVnCpgq60akR-uy4HFB7hnCoQHFqWTbrxpG4H1Fj6dx1RCMlonXfa018zELJK45qaKw2cgxVl5oZiOFVNyx67WHeoeMNpK3kj7xSGofOP8o5bc6mznKM615FPOOypc8QJyuKd6Yed8pHLlyjdJw4cx1sJB8LMZ3jKXu_IbpQS7caMhHvHiPAS7qM')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<h3 class="relative p-4 text-lg font-bold text-white">Kuliner</h3>
+</div>
+<div class="group relative flex h-40 items-end justify-start overflow-hidden rounded-xl">
+<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCRcqvna4Xf7mFqJxaCZKlIegaPPD9UVgVSyDidCzbJlCz6gwpnGRzqd6MjLiVsemMnznXZ6CifIxXgPZo05bRVnCpgq60akR-uy4HFB7hnCoQHFqWTbrxpG4H1Fj6dx1RCMlonXfa018zELJK45qaKw2cgxVl5oZiOFVNyx67WHeoeMNpK3kj7xSGofOP8o5bc6mznKM615FPOOypc8QJyuKd6Yed8pHLlyjdJw4cx1sJB8LMZ3jKXu_IbpQS7caMhHvHiPAS7qM')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<h3 class="relative p-4 text-lg font-bold text-white">Keluarga</h3>
+</div>
+</div>
+</section>
+<section class="mt-10 rounded-xl bg-white p-8 dark:bg-gray-900/50 lg:mt-16">
+<h2 class="text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Mengapa Memilih Kami?</h2>
+<div class="mt-8 grid grid-cols-1 gap-8 text-center md:grid-cols-3">
+<div class="flex flex-col items-center">
+<div class="flex h-14 w-14 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined !text-3xl">local_offer</span>
+</div>
+<h3 class="mt-4 text-lg font-bold text-gray-900 dark:text-white">Harga Terbaik</h3>
+<p class="mt-1 text-gray-600 dark:text-gray-400">Kami menawarkan harga kompetitif untuk semua tiket dan tur.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="flex h-14 w-14 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined !text-3xl">credit_card</span>
+</div>
+<h3 class="mt-4 text-lg font-bold text-gray-900 dark:text-white">Pemesanan Mudah</h3>
+<p class="mt-1 text-gray-600 dark:text-gray-400">Pesan tiket Anda hanya dengan beberapa klik melalui platform aman kami.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="flex h-14 w-14 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined !text-3xl">support_agent</span>
+</div>
+<h3 class="mt-4 text-lg font-bold text-gray-900 dark:text-white">Dukungan 24/7</h3>
+<p class="mt-1 text-gray-600 dark:text-gray-400">Tim dukungan pelanggan kami siap membantu Anda kapan saja.</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer class="mt-auto border-t border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900/50">
+<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white">Perusahaan</h4>
+<ul class="mt-4 space-y-2 text-sm">
+<li><a class="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Tentang Kami</a></li>
+<li><a class="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Karir</a></li>
+<li><a class="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Pers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white">Dukungan</h4>
+<ul class="mt-4 space-y-2 text-sm">
+<li><a class="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Pusat Bantuan</a></li>
+<li><a class="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Hubungi Kami</a></li>
+<li><a class="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white">Hukum</h4>
+<ul class="mt-4 space-y-2 text-sm">
+<li><a class="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Ketentuan Layanan</a></li>
+<li><a class="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Kebijakan Privasi</a></li>
+</ul>
+</div>
+<div>
+<div class="flex items-center gap-4 text-gray-900 dark:text-white">
+<svg class="h-8 w-8 text-primary" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 17.5 3 12l11.5-5.5L21 12l-6.5 5.5z"></path>
+<path d="m3 12 6 6"></path>
+<path d="m21 12-6-6"></path>
+</svg>
+<h2 class="text-lg font-bold">Tiket Wisata Surabaya</h2>
+</div>
+</div>
+</div>
+<div class="mt-8 border-t border-gray-200 pt-8 text-center text-sm text-gray-500 dark:border-gray-800 dark:text-gray-400">
+<p>© 2024 Tiket Wisata Surabaya. Hak cipta dilindungi.</p>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>
