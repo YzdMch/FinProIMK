@@ -71,6 +71,7 @@
         </div>
     </div>
 </header>
+
         
         <!-- Main Content -->
         <main class="container mx-auto flex-1 px-4 py-8">
@@ -88,83 +89,49 @@
                                 </div>
                             </div>
                             
-                            <!-- Filter Options -->
-                            <div class="space-y-6">
-                                <!-- Price Filter -->
-                                <div class="flex flex-col gap-3">
-                                    <label class="text-sm font-semibold text-gray-900 dark:text-white">Harga</label>
-                                    <input 
-                                        class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 accent-primary" 
-                                        type="range" 
-                                    />
-                                    <div class="flex justify-between text-xs text-gray-500 dark:text-gray-400">
-                                        <span>Rp 0</span>
-                                        <span>Rp 1.000.000+</span>
-                                    </div>
-                                </div>
-                                
-                                <!-- Date Filter -->
-                                <div class="flex flex-col gap-3">
-                                    <label class="text-sm font-semibold text-gray-900 dark:text-white" for="date-filter">Tanggal</label>
-                                    <div class="relative">
-                                        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                                            <span class="material-symbols-outlined text-gray-500 dark:text-gray-400">calendar_today</span>
-                                        </div>
-                                        <input 
-                                            class="form-input w-full rounded-lg border-gray-200 dark:border-gray-700 bg-transparent py-2 pl-10 pr-4 text-sm focus:border-primary focus:ring-primary" 
-                                            id="date-filter" 
-                                            placeholder="Pilih tanggal" 
-                                            type="text"
-                                        />
-                                    </div>
-                                </div>
-                                
-                                <!-- Category Filter -->
-                                <div class="flex flex-col gap-3">
-                                    <label class="text-sm font-semibold text-gray-900 dark:text-white">Jenis Wisata</label>
-                                    <div class="space-y-2">
-                                        <div class="flex items-center">
-                                            <input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary dark:bg-gray-800 dark:border-gray-600" id="wisata-alam" type="checkbox"/>
-                                            <label class="ml-2 text-sm text-gray-600 dark:text-gray-300" for="wisata-alam">Alam</label>
-                                        </div>
-                                        <div class="flex items-center">
-                                            <input checked class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary dark:bg-gray-800 dark:border-gray-600" id="wisata-sejarah" type="checkbox"/>
-                                            <label class="ml-2 text-sm text-gray-600 dark:text-gray-300" for="wisata-sejarah">Sejarah</label>
-                                        </div>
-                                        <div class="flex items-center">
-                                            <input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary dark:bg-gray-800 dark:border-gray-600" id="wisata-kuliner" type="checkbox"/>
-                                            <label class="ml-2 text-sm text-gray-600 dark:text-gray-300" for="wisata-kuliner">Kuliner</label>
-                                        </div>
-                                        <div class="flex items-center">
-                                            <input checked class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary dark:bg-gray-800 dark:border-gray-600" id="wisata-keluarga" type="checkbox"/>
-                                            <label class="ml-2 text-sm text-gray-600 dark:text-gray-300" for="wisata-keluarga">Keluarga</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Rating Filter -->
-                                <div class="flex flex-col gap-3">
-                                    <label class="text-sm font-semibold text-gray-900 dark:text-white">Rating Pengguna</label>
-                                    <div class="flex items-center gap-1">
-                                        <button class="p-1 rounded-md hover:bg-primary/10 text-yellow-500">
-                                            <span class="material-symbols-outlined !text-2xl" style="font-variation-settings: 'FILL' 1;">star</span>
-                                        </button>
-                                        <button class="p-1 rounded-md hover:bg-primary/10 text-yellow-500">
-                                            <span class="material-symbols-outlined !text-2xl" style="font-variation-settings: 'FILL' 1;">star</span>
-                                        </button>
-                                        <button class="p-1 rounded-md hover:bg-primary/10 text-yellow-500">
-                                            <span class="material-symbols-outlined !text-2xl" style="font-variation-settings: 'FILL' 1;">star</span>
-                                        </button>
-                                        <button class="p-1 rounded-md hover:bg-primary/10 text-yellow-500">
-                                            <span class="material-symbols-outlined !text-2xl" style="font-variation-settings: 'FILL' 1;">star</span>
-                                        </button>
-                                        <button class="p-1 rounded-md hover:bg-primary/10 text-gray-300 dark:text-gray-600">
-                                            <span class="material-symbols-outlined !text-2xl">star</span>
-                                        </button>
-                                        <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">4+</span>
-                                    </div>
-                                </div>
-                            </div>
+                           <!-- FILTER SECTION -->
+<div class="space-y-4">
+
+    <!-- Tag Filter -->
+    <div>
+        <h3 class="font-semibold mb-2">Kategori</h3>
+        <div class="flex flex-col gap-1">
+            <label class="cursor-pointer hover:text-primary transition">
+                <input type="checkbox" class="tagFilter" value="Edukasi"> Edukasi
+            </label>
+            <label class="cursor-pointer hover:text-primary transition">
+                <input type="checkbox" class="tagFilter" value="Sejarah"> Sejarah
+            </label>
+            <label class="cursor-pointer hover:text-primary transition">
+                <input type="checkbox" class="tagFilter" value="Keluarga"> Keluarga
+            </label>
+            <label class="cursor-pointer hover:text-primary transition">
+                <input type="checkbox" class="tagFilter" value="Outdoor"> Outdoor
+            </label>
+        </div>
+    </div>
+
+    <!-- Rating Filter -->
+    <div>
+        <h3 class="font-semibold mb-2">Rating</h3>
+        <select id="ratingFilter" class="p-2 rounded-lg border hover:border-primary transition">
+            <option value="">Semua</option>
+            <option value="4.0">≥ 4.0</option>
+            <option value="4.5">≥ 4.5</option>
+            <option value="4.7">≥ 4.7</option>
+        </select>
+    </div>
+
+    <!-- Price Filter -->
+    <div>
+        <h3 class="font-semibold mb-2">Harga Maksimal (Rp)</h3>
+        <input id="priceFilter" type="range" min="5000" max="20000" step="1000" value="20000"
+               class="w-full accent-primary">
+        <p class="mt-1 text-sm">Maks: <span id="priceValue">20000</span></p>
+    </div>
+
+</div>
+
                         </div>
                         
                         <!-- Filter Buttons -->
@@ -198,11 +165,13 @@
                         </button>
                     </div>
                     
-                    <!-- Attraction Cards Grid -->
-                    <div class="grid grid-cols-1 gap-6 @container md:grid-cols-2 xl:grid-cols-3">
+                   <!-- Attraction Cards Grid -->
+<div id="cardContainer" class="grid grid-cols-1 gap-6 @container md:grid-cols-2 xl:grid-cols-3">
+</div>
+<script> </script>
                         <!-- Card Template -->
                         <div class="flex flex-col overflow-hidden rounded-xl bg-white dark:bg-gray-900/50 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1">
-                            <div class="aspect-video w-full bg-cover bg-center" style="background-image: url('gambar/kbs.jpg');"></div>
+                            <div class="aspect-video w-full bg-cover bg-center" style="background-image: url('kbs.jpg');"></div>
                             <div class="flex flex-1 flex-col p-4">
                                 <div class="flex-1">
                                     <h3 class="text-lg font-bold text-gray-900 dark:text-white">Kebun Binatang Surabaya</h3>
@@ -225,7 +194,7 @@
                         
                         <!-- Card 2 -->
                         <div class="flex flex-col overflow-hidden rounded-xl bg-white dark:bg-gray-900/50 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1">
-                            <div class="aspect-video w-full bg-cover bg-center" style="background-image: url('gambar/monkasel.png');"></div>
+                            <div class="aspect-video w-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAFx9cTqTsn2Xt3nRCv6mdTXoHmwJOuj3f9ELT0guXsu3RWF64hXRbJKPlprWro5TkRyBI4MdPg_RGNjEstdntRIOmdaGwo3T6wHJjqDtmjZB9myC4qIPbA198AkzlPoKXyLHFNABexODgSsUZ2-OfJNkH-3_guSDmfqmfh3BpxhZANd57sxzdqQlLENoFRZc8SEksgusdN395FrEO01HRLKqOqe1938qTnrfpIg4ytGAJuJQNuYlukFuhtK0bESCjHpaMlAYVHYG8')"></div>
                             <div class="flex flex-1 flex-col p-4">
                                 <div class="flex-1">
                                     <h3 class="text-lg font-bold text-gray-900 dark:text-white">Monumen Kapal Selam</h3>
@@ -248,7 +217,7 @@
                         
                         <!-- Card 3 -->
                         <div class="flex flex-col overflow-hidden rounded-xl bg-white dark:bg-gray-900/50 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1">
-                            <div class="aspect-video w-full bg-cover bg-center" style="background-image: url('gambar/museumnovember.jpg');"></div>
+                            <div class="aspect-video w-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAItuJJf2qxlAdEloNfQfSb7QByiRBBmzslVEheSPnwRbSj0aWIr43BzvKeOvNRRt1k3r3RAYtPfMiApGBTYflljRC9HdcvdpoPdMl9OKReSnoe_J3spfhjp5mWp0aftUPyb3yWZP-GDyrFt4U4XNs_ciwadvhjn0eEiCnRmfKNdHSWlixcmb6a-p6b0n_GbFPaxFSVwT1f0tFUROV9zvyUBeshj0snJynjLkfPKGfFe80yx2R9alDZSO84MJW-9-LobfGkXvoVlnQ')"></div>
                             <div class="flex flex-1 flex-col p-4">
                                 <div class="flex-1">
                                     <h3 class="text-lg font-bold text-gray-900 dark:text-white">Museum 10 November</h3>
@@ -271,7 +240,7 @@
                         
                         <!-- Card 4 -->
                         <div class="flex flex-col overflow-hidden rounded-xl bg-white dark:bg-gray-900/50 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1">
-                            <div class="aspect-video w-full bg-cover bg-center" style="background-image: url('gambar/kenjeran.jpg');"></div>
+                            <div class="aspect-video w-full bg-cover bg-center" style="background-image: url('kenjeran.jpg');"></div>
                             <div class="flex flex-1 flex-col p-4">
                                 <div class="flex-1">
                                     <h3 class="text-lg font-bold text-gray-900 dark:text-white">Taman Hiburan Pantai Kenjeran (QRIS)</h3>
@@ -294,7 +263,7 @@
                         
                         <!-- Card 5 -->
                         <div class="flex flex-col overflow-hidden rounded-xl bg-white dark:bg-gray-900/50 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1">
-                            <div class="aspect-video w-full bg-cover bg-center" style="background-image: url('gambar/museumpendidikan.jpg');"></div>
+                            <div class="aspect-video w-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBxF_svqRmwRzzH6-tgZvlnyAW3io5QWhrSNVA2YsUojfsMUF0Fyl8rfC7XA36BGzoRCnv7oMCjv8D2b_qElYxJ6T-HDtn12P_Z52Izvj7eBrAp_qYloqoP7M2NiW-9h87MRB6Fpa9mlPNndyKjskl7jEDdeClaaX20MBXgccM3LAPSE8tMvt1VoHO7_-CZMcOS-J2ZAVLxxE-4xL3rPsl8gUu98xNKwR-CT-PjTzUgr4yI0U7BmnUyu0qZM7Jp6qaVra6xuiipz4A')"></div>
                             <div class="flex flex-1 flex-col p-4">
                                 <div class="flex-1">
                                     <h3 class="text-lg font-bold text-gray-900 dark:text-white">Museum Pendidikan</h3>
@@ -317,7 +286,7 @@
                         
                         <!-- Card 6 -->
                         <div class="flex flex-col overflow-hidden rounded-xl bg-white dark:bg-gray-900/50 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1">
-                            <div class="aspect-video w-full bg-cover bg-center" style="background-image: url('gambar/perahu.jpg');"></div>
+                            <div class="aspect-video w-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5jHn_q-7Lv46krO7h9DZKxz8rog-JG5H0x837SX8qgO4Z7skXT7x1hM_RlrH_pLlsnYF0LprzrsisBChvpput0QQufVheAMvynNiBKk1O0z9q8nXxWxntMsiYjiztdqhbxXcdCy0DgOHqfZflWco-ZFhQKJMgxJ37Dqrs5Gy_zJi26Jtukq0BtCtoA-KrYxaLlq1F_-gH3fb2ZZSSobKmtjJAlXFZcF9sO463NkvQX36PmhwAzLskFJhMdNrFUN4nqmGHcY_QXto')"></div>
                             <div class="flex flex-1 flex-col p-4">
                                 <div class="flex-1">
                                     <h3 class="text-lg font-bold text-gray-900 dark:text-white">Wisata Perahu Kalimas (Rute Taman Prestasi - Museum Pendidikan)</h3>
@@ -344,3 +313,119 @@
     </div>
 </body>
 </html>
+
+<script>
+const wisataData = [
+    {
+        name: "Kebun Binatang Surabaya",
+        lokasi: "Jl. Setail No.1, Surabaya",
+        price: 15000,
+        rating: 4.5,
+        ulasan: 1234,
+        img: "gambar/kbs.jpg",
+        tag: ["Keluarga", "Edukasi"]
+    },
+    {
+        name: "Monumen Kapal Selam",
+        lokasi: "Jl. Pemuda No.39, Surabaya",
+        price: 15000,
+        rating: 4.7,
+        ulasan: 2450,
+        img: "gambar/monkasel.png",
+        tag: ["Sejarah", "Edukasi"]
+    },
+    {
+        name: "Museum 10 November",
+        lokasi: "Jl. Pahlawan, Surabaya",
+        price: 5000,
+        rating: 4.8,
+        ulasan: 3112,
+        img: "gambar/museumnovember.jpg",
+        tag: ["Sejarah"]
+    },
+    {
+        name: "Pantai Kenjeran",
+        lokasi: "Bulak, Surabaya",
+        price: 15000,
+        rating: 4.3,
+        ulasan: 987,
+        img: "gambar/kenjeran.jpg",
+        tag: ["Outdoor", "Keluarga"]
+    },
+    {
+        name: "Museum Pendidikan",
+        lokasi: "Genteng, Surabaya",
+        price: 10000,
+        rating: 4.9,
+        ulasan: 4582,
+        img: "gambar/museumpendidikan.jpg",
+        tag: ["Edukasi"]
+    },
+    {
+        name: "Wisata Perahu Kalimas",
+        lokasi: "Ketabang Kali, Surabaya",
+        price: 7000,
+        rating: 4.4,
+        ulasan: 890,
+        img: "gambar/perahu.jpg",
+        tag: ["Outdoor"]
+    }
+];
+
+function renderCards(data) {
+    const container = document.getElementById("cardContainer");
+    container.innerHTML = "";
+
+    data.forEach(item => {
+        container.innerHTML += `
+        <div class="flex flex-col overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all">
+            <div class="aspect-video bg-cover bg-center" style="background-image:url('${item.img}')"></div>
+            <div class="p-4 flex flex-col flex-1">
+                <h3 class="text-lg font-bold">${item.name}</h3>
+                <p class="text-sm text-gray-500">${item.lokasi}</p>
+
+                <div class="mt-2 flex items-center gap-1">
+                    <span class="material-symbols-outlined text-yellow-500" style="font-variation-settings:'FILL' 1;">star</span>
+                    <span class="text-sm font-bold">${item.rating}</span>
+                    <span class="text-sm text-gray-500">(${item.ulasan} ulasan)</span>
+                </div>
+
+                <div class="mt-4 flex justify-between items-end">
+                    <div>
+                        <p class="text-xs text-gray-500">Mulai dari</p>
+                        <p class="text-lg font-bold text-primary">Rp ${item.price.toLocaleString()}</p>
+                    </div>
+                    <button class="px-4 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary/20 transition">
+                        Lihat Detail
+                    </button>
+                </div>
+            </div>
+        </div>`;
+    });
+}
+
+function filterCards() {
+    let selectedTags = [...document.querySelectorAll(".tagFilter:checked")].map(e => e.value);
+
+    let ratingMin = document.getElementById("ratingFilter").value;
+    let priceMax = document.getElementById("priceFilter").value;
+
+    let filtered = wisataData.filter(item => {
+        let tagMatch = selectedTags.length === 0 || selectedTags.some(tag => item.tag.includes(tag));
+        let ratingMatch = ratingMin === "" || item.rating >= parseFloat(ratingMin);
+        let priceMatch = item.price <= priceMax;
+        return tagMatch && ratingMatch && priceMatch;
+    });
+
+    renderCards(filtered);
+}
+
+document.querySelectorAll(".tagFilter").forEach(cb => cb.addEventListener("change", filterCards));
+document.getElementById("ratingFilter").addEventListener("change", filterCards);
+document.getElementById("priceFilter").addEventListener("input", () => {
+    document.getElementById("priceValue").innerText = document.getElementById("priceFilter").value;
+    filterCards();
+});
+
+renderCards(wisataData);
+</script>
