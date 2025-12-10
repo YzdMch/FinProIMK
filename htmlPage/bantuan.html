@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bantuan & FAQ - Tiket Wisata Surabaya</title>
+    
+    <!-- External Resources -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+    /* Animasi FAQ - FIXED VERSION */
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+    }
+    
+    .faq-item.active .faq-answer {
+        max-height: 1000px;
+        transition: max-height 1s ease-in-out;
+    }
+    
+    .faq-toggle .material-symbols-outlined {
+        transition: transform 0.3s ease;
+    }
+    
+    .faq-item.active .faq-toggle .material-symbols-outlined {
+        transform: rotate(180deg);
+    }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #10B981;
+            border-radius: 4px;
+        }
+        
+        .dark ::-webkit-scrollbar-track {
+            background: #374151;
+        }
+        
+        .dark ::-webkit-scrollbar-thumb {
+            background: #059669;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#10B981",
+                        "primary-light": "#D1FAE5",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0, 0, 0, 0.08)',
+                        'soft-dark': '0 4px 20px rgba(0, 0, 0, 0.25)',
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="relative flex min-h-screen w-full flex-col">
+        
+        <!-- Header -->
+       <header id="navbar"
+class="sticky top-0 z-50 w-full border-b border-gray-200/50 bg-background-light/80 backdrop-blur-sm dark:border-gray-800/50 dark:bg-background-dark/80 transition-transform duration-300 transform -translate-y-0">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-4">
+
+        <!-- Logo -->
+        <a href="index.html"> 
+            <img src="gambar/logoo.png" width="150" height="50" alt="Logo">
+        </a>
+
+        <!-- Navigation -->
+        <nav class="hidden md:flex flex-1 justify-center items-center gap-9">
+            <a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="destinasi.html">Destinasi</a>
+            <a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="promosi.html">Promosi</a>
+            <a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="tiket-saya.html">Tiket Saya</a>
+        </nav>
+
+        <!-- Right section -->
+        <div class="flex items-center gap-4">
+            <a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="bantuan.html">Bantuan</a>
+            <button class="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-200/50 dark:bg-gray-800/60 text-gray-900 dark:text-white hover:bg-gray-300/50 dark:hover:bg-gray-700/60 md:hidden">
+                <span class="material-symbols-outlined">search</span>
+            </button>
+        </div>
+    </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1">
+            <!-- Page Header -->
+            <div class="bg-gradient-to-br from-primary/10 to-emerald-100/50 dark:from-gray-900 dark:to-gray-800 border-b border-gray-200 dark:border-gray-800">
+                <div class="container mx-auto max-w-6xl px-4 py-12">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="material-symbols-outlined text-primary text-4xl">help</span>
+                        <div>
+                            <h1 class="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-2">Pusat Bantuan</h1>
+                            <p class="text-gray-600 dark:text-gray-400">Semua yang perlu Anda ketahui untuk pengalaman pemesanan yang lancar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="container mx-auto max-w-6xl px-4 py-12">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                    <!-- Sidebar -->
+                    <div class="lg:col-span-1">
+                        <div class="sticky top-24 bg-white dark:bg-gray-900 rounded-xl shadow-soft dark:shadow-soft-dark p-6 border border-gray-100 dark:border-gray-800">
+                            <h3 class="font-bold text-lg mb-6 text-gray-900 dark:text-white flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">menu</span>
+                                Menu Bantuan
+                            </h3>
+                            <nav class="space-y-1">
+                                <a href="#cara-pesan" class="flex items-center gap-3 p-3 rounded-lg hover:bg-primary-light dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 transition-colors group">
+                                    <span class="material-symbols-outlined text-gray-400 group-hover:text-primary">shopping_cart</span>
+                                    <span class="font-medium">Cara Pemesanan</span>
+                                </a>
+                                
+                                <a href="#pembayaran" class="flex items-center gap-3 p-3 rounded-lg hover:bg-primary-light dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 transition-colors group">
+                                    <span class="material-symbols-outlined text-gray-400 group-hover:text-primary">payments</span>
+                                    <span class="font-medium">Pembayaran</span>
+                                </a>
+                                
+                                <a href="#akun-login" class="flex items-center gap-3 p-3 rounded-lg hover:bg-primary-light dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 transition-colors group">
+                                    <span class="material-symbols-outlined text-gray-400 group-hover:text-primary">account_circle</span>
+                                    <span class="font-medium">Akun & Login</span>
+                                </a>
+                                
+                                <a href="#cara-batal" class="flex items-center gap-3 p-3 rounded-lg hover:bg-primary-light dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 transition-colors group">
+                                    <span class="material-symbols-outlined text-gray-400 group-hover:text-primary">cancel</span>
+                                    <span class="font-medium">Pembatalan Tiket</span>
+                                </a>
+                                
+                                <a href="#kontak" class="flex items-center gap-3 p-3 rounded-lg hover:bg-primary-light dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 transition-colors group">
+                                    <span class="material-symbols-outlined text-gray-400 group-hover:text-primary">contact_support</span>
+                                    <span class="font-medium">Kontak Kami</span>
+                                </a>
+                            </nav>
+                            
+                            <!-- Quick Help -->
+                            <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-800">
+                                <h4 class="font-bold mb-3 text-gray-900 dark:text-white">Butuh Bantuan Cepat?</h4>
+                                <div class="flex flex-col gap-2">
+                                    <a href="tel:03112345678" class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+                                        <span class="material-symbols-outlined text-sm">call</span>
+                                        (031) 1234-5678
+                                    </a>
+                                    <a href="mailto:bantuan@tiketwisatasurabaya.com" class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+                                        <span class="material-symbols-outlined text-sm">mail</span>
+                                        Email Kami
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Area -->
+                    <div class="lg:col-span-3">
+                        <!-- Cara Pemesanan -->
+                        <section id="cara-pesan" class="mb-12 scroll-mt-24">
+                            <div class="flex items-center gap-3 mb-8">
+                                <div class="p-3 bg-primary/10 rounded-xl">
+                                    <span class="material-symbols-outlined text-primary text-2xl">shopping_cart</span>
+                                </div>
+                                <div>
+                                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Cara Pemesanan Tiket</h2>
+                                    <p class="text-gray-600 dark:text-gray-400">Panduan lengkap pemesanan tiket wisata online</p>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <!-- Step 1 -->
+                                <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-soft dark:shadow-soft-dark border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
+                                    <div class="flex items-start gap-4">
+                                        <div class="flex-shrink-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                                        <div>
+                                            <h3 class="font-bold text-lg mb-3 text-gray-900 dark:text-white">Cari Destinasi</h3>
+                                            <p class="text-gray-600 dark:text-gray-400 mb-3">Gunakan fitur pencarian di beranda atau jelajahi halaman destinasi untuk menemukan tempat wisata yang diinginkan.</p>
+                                            <div class="text-sm text-primary font-medium">💡 Tips: Filter berdasarkan kategori untuk hasil lebih cepat</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Step 2 -->
+                                <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-soft dark:shadow-soft-dark border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
+                                    <div class="flex items-start gap-4">
+                                        <div class="flex-shrink-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                                        <div>
+                                            <h3 class="font-bold text-lg mb-3 text-gray-900 dark:text-white">Pilih Tanggal & Tiket</h3>
+                                            <p class="text-gray-600 dark:text-gray-400 mb-3">Tentukan tanggal kunjungan dan jumlah tiket (dewasa/anak). Periksa ketersediaan untuk tanggal yang dipilih.</p>
+                                            <div class="text-sm text-primary font-medium">📅 Pilih hari weekday untuk harga lebih murah</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Step 3 -->
+                                <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-soft dark:shadow-soft-dark border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
+                                    <div class="flex items-start gap-4">
+                                        <div class="flex-shrink-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                                        <div>
+                                            <h3 class="font-bold text-lg mb-3 text-gray-900 dark:text-white">Review & Checkout</h3>
+                                            <p class="text-gray-600 dark:text-gray-400 mb-3">Periksa detail pemesanan termasuk total harga, tanggal, dan informasi destinasi sebelum melanjutkan ke pembayaran.</p>
+                                            <div class="text-sm text-primary font-medium">✅ Pastikan semua data sudah benar</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Step 4 -->
+                                <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-soft dark:shadow-soft-dark border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
+                                    <div class="flex items-start gap-4">
+                                        <div class="flex-shrink-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
+                                        <div>
+                                            <h3 class="font-bold text-lg mb-3 text-gray-900 dark:text-white">Bayar & Terima Tiket</h3>
+                                            <p class="text-gray-600 dark:text-gray-400 mb-3">Pilih metode pembayaran, selesaikan transaksi, dan terima e-ticket di email Anda dalam beberapa menit.</p>
+                                            <div class="text-sm text-primary font-medium">📧 Cek folder spam jika email tidak muncul</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Pembayaran -->
+                        <section id="pembayaran" class="mb-12 scroll-mt-24">
+                            <div class="flex items-center gap-3 mb-8">
+                                <div class="p-3 bg-primary/10 rounded-xl">
+                                    <span class="material-symbols-outlined text-primary text-2xl">payments</span>
+                                </div>
+                                <div>
+                                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Metode Pembayaran</h2>
+                                    <p class="text-gray-600 dark:text-gray-400">Berbagai cara pembayaran yang tersedia</p>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-6">
+                                <!-- Payment Methods -->
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                    <div class="bg-white dark:bg-gray-900 p-4 rounded-lg border border-gray-200 dark:border-gray-800 text-center">
+                                        <div class="text-2xl mb-2">🏦</div>
+                                        <div class="font-medium">Transfer Bank</div>
+                                        <div class="text-sm text-gray-500">BCA, BNI, Mandiri</div>
+                                    </div>
+                                    <div class="bg-white dark:bg-gray-900 p-4 rounded-lg border border-gray-200 dark:border-gray-800 text-center">
+                                        <div class="text-2xl mb-2">📱</div>
+                                        <div class="font-medium">E-Wallet</div>
+                                        <div class="text-sm text-gray-500">Gopay, OVO, Dana</div>
+                                    </div>
+                                    <div class="bg-white dark:bg-gray-900 p-4 rounded-lg border border-gray-200 dark:border-gray-800 text-center">
+                                        <div class="text-2xl mb-2">💳</div>
+                                        <div class="font-medium">Kartu Kredit</div>
+                                        <div class="text-sm text-gray-500">Visa, Mastercard</div>
+                                    </div>
+                                    <div class="bg-white dark:bg-gray-900 p-4 rounded-lg border border-gray-200 dark:border-gray-800 text-center">
+                                        <div class="text-2xl mb-2">📸</div>
+                                        <div class="font-medium">QRIS</div>
+                                        <div class="text-sm text-gray-500">Semua bank</div>
+                                    </div>
+                                </div>
+
+                                <!-- FAQ Pembayaran - FIXED -->
+                                <div class="space-y-4">
+                                    <div class="faq-item bg-white dark:bg-gray-900 rounded-xl shadow-soft dark:shadow-soft-dark overflow-hidden border border-gray-100 dark:border-gray-800">
+                                        <button class="faq-toggle w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                            <span class="font-bold text-gray-900 dark:text-white">Berapa lama batas waktu pembayaran?</span>
+                                            <span class="material-symbols-outlined text-gray-400 transition-transform">expand_more</span>
+                                        </button>
+                                        <div class="faq-answer px-6 pb-6">
+                                            <p class="text-gray-600 dark:text-gray-400">Batas waktu pembayaran adalah 2 jam sejak pemesanan. Jika melebihi batas waktu, pesanan akan otomatis dibatalkan.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="faq-item bg-white dark:bg-gray-900 rounded-xl shadow-soft dark:shadow-soft-dark overflow-hidden border border-gray-100 dark:border-gray-800">
+                                        <button class="faq-toggle w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                            <span class="font-bold text-gray-900 dark:text-white">Bagaimana jika pembayaran gagal?</span>
+                                            <span class="material-symbols-outlined text-gray-400 transition-transform">expand_more</span>
+                                        </button>
+                                        <div class="faq-answer px-6 pb-6">
+                                            <p class="text-gray-600 dark:text-gray-400">Jika pembayaran gagal, Anda dapat mencoba metode pembayaran lain. Pastikan saldo/cukup dan koneksi internet stabil.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="faq-item bg-white dark:bg-gray-900 rounded-xl shadow-soft dark:shadow-soft-dark overflow-hidden border border-gray-100 dark:border-gray-800">
+                                        <button class="faq-toggle w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                            <span class="font-bold text-gray-900 dark:text-white">Apakah ada biaya transaksi?</span>
+                                            <span class="material-symbols-outlined text-gray-400 transition-transform">expand_more</span>
+                                        </button>
+                                        <div class="faq-answer px-6 pb-6">
+                                            <p class="text-gray-600 dark:text-gray-400">Tidak ada biaya transaksi tambahan. Harga yang tertera sudah final termasuk semua pajak.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Akun & Login -->
+                        <section id="akun-login" class="mb-12 scroll-mt-24">
+                            <div class="flex items-center gap-3 mb-8">
+                                <div class="p-3 bg-primary/10 rounded-xl">
+                                    <span class="material-symbols-outlined text-primary text-2xl">account_circle</span>
+                                </div>
+                                <div>
+                                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Akun & Login</h2>
+                                    <p class="text-gray-600 dark:text-gray-400">Kelola akun dan masalah login</p>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-soft dark:shadow-soft-dark border border-gray-100 dark:border-gray-800">
+                                    <h3 class="font-bold text-lg mb-4 text-gray-900 dark:text-white flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-primary">person_add</span>
+                                        Membuat Akun Baru
+                                    </h3>
+                                    <ul class="space-y-3 text-gray-600 dark:text-gray-400">
+                                        <li class="flex items-start gap-2">
+                                            <span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                                            <span>Klik "Daftar" di pojok kanan atas</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                                            <span>Isi data pribadi (nama, email, nomor HP)</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                                            <span>Verifikasi email melalui link yang dikirim</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                                            <span>Akun siap digunakan untuk pemesanan</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-soft dark:shadow-soft-dark border border-gray-100 dark:border-gray-800">
+                                    <h3 class="font-bold text-lg mb-4 text-gray-900 dark:text-white flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-primary">lock_reset</span>
+                                        Lupa Password
+                                    </h3>
+                                    <p class="text-gray-600 dark:text-gray-400 mb-4">Jika lupa password, ikuti langkah berikut:</p>
+                                    <ol class="space-y-2 text-gray-600 dark:text-gray-400">
+                                        <li>1. Klik "Lupa Password" di halaman login</li>
+                                        <li>2. Masukkan email yang terdaftar</li>
+                                        <li>3. Cek email untuk link reset password</li>
+                                        <li>4. Buat password baru</li>
+                                        <li>5. Login dengan password baru</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Cara Pembatalan -->
+                        <section id="cara-batal" class="mb-12 scroll-mt-24">
+                            <div class="flex items-center gap-3 mb-8">
+                                <div class="p-3 bg-primary/10 rounded-xl">
+                                    <span class="material-symbols-outlined text-primary text-2xl">cancel</span>
+                                </div>
+                                <div>
+                                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Pembatalan Tiket</h2>
+                                    <p class="text-gray-600 dark:text-gray-400">Kebijakan dan prosedur pembatalan</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Policy Cards -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                                <div class="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-5">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <div class="w-10 h-10 bg-green-100 dark:bg-green-800 rounded-full flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-green-600 dark:text-green-400">check</span>
+                                        </div>
+                                        <h3 class="font-bold text-green-800 dark:text-green-300">24 Jam Sebelum</h3>
+                                    </div>
+                                    <p class="text-green-700 dark:text-green-400">Pengembalian 100%</p>
+                                </div>
+
+                                <div class="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl p-5">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <div class="w-10 h-10 bg-yellow-100 dark:bg-yellow-800 rounded-full flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-yellow-600 dark:text-yellow-400">schedule</span>
+                                        </div>
+                                        <h3 class="font-bold text-yellow-800 dark:text-yellow-300">12-24 Jam Sebelum</h3>
+                                    </div>
+                                    <p class="text-yellow-700 dark:text-yellow-400">Pengembalian 50%</p>
+                                </div>
+
+                                <div class="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-5">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <div class="w-10 h-10 bg-red-100 dark:bg-red-800 rounded-full flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-red-600 dark:text-red-400">close</span>
+                                        </div>
+                                        <h3 class="font-bold text-red-800 dark:text-red-300">Kurang dari 12 Jam</h3>
+                                    </div>
+                                    <p class="text-red-700 dark:text-red-400">Tidak ada pengembalian</p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Pembatalan -->
+                            <div class="space-y-4">
+                                <div class="faq-item bg-white dark:bg-gray-900 rounded-xl shadow-soft dark:shadow-soft-dark overflow-hidden border border-gray-100 dark:border-gray-800">
+                                    <button class="faq-toggle w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                        <span class="font-bold text-gray-900 dark:text-white">Bagaimana cara membatalkan tiket?</span>
+                                        <span class="material-symbols-outlined text-gray-400 transition-transform">expand_more</span>
+                                    </button>
+                                    <div class="faq-answer px-6 pb-6">
+                                        <p class="text-gray-600 dark:text-gray-400 mb-3">Langkah membatalkan tiket:</p>
+                                        <ol class="space-y-2 text-gray-600 dark:text-gray-400 ml-4">
+                                            <li>1. Login ke akun Anda</li>
+                                            <li>2. Buka menu "Tiket Saya"</li>
+                                            <li>3. Pilih tiket yang ingin dibatalkan</li>
+                                            <li>4. Klik tombol "Batalkan Tiket"</li>
+                                            <li>5. Konfirmasi pembatalan</li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item bg-white dark:bg-gray-900 rounded-xl shadow-soft dark:shadow-soft-dark overflow-hidden border border-gray-100 dark:border-gray-800">
+                                    <button class="faq-toggle w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                        <span class="font-bold text-gray-900 dark:text-white">Berapa lama dana dikembalikan?</span>
+                                        <span class="material-symbols-outlined text-gray-400 transition-transform">expand_more</span>
+                                    </button>
+                                    <div class="faq-answer px-6 pb-6">
+                                        <p class="text-gray-600 dark:text-gray-400">Dana akan dikembalikan dalam 1-3 hari kerja, tergantung metode pembayaran. Dana dikembalikan ke metode pembayaran awal.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item bg-white dark:bg-gray-900 rounded-xl shadow-soft dark:shadow-soft-dark overflow-hidden border border-gray-100 dark:border-gray-800">
+                                    <button class="faq-toggle w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                        <span class="font-bold text-gray-900 dark:text-white">Apakah bisa mengubah tanggal tiket?</span>
+                                        <span class="material-symbols-outlined text-gray-400 transition-transform">expand_more</span>
+                                    </button>
+                                    <div class="faq-answer px-6 pb-6">
+                                        <p class="text-gray-600 dark:text-gray-400">Ya, Anda bisa mengubah tanggal tiket melalui menu "Tiket Saya" > "Ubah Jadwal" dengan syarat perubahan dilakukan minimal 24 jam sebelum kunjungan.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Kontak Kami -->
+                        <section id="kontak" class="scroll-mt-24">
+                            <div class="flex items-center gap-3 mb-8">
+                                <div class="p-3 bg-primary/10 rounded-xl">
+                                    <span class="material-symbols-outlined text-primary text-2xl">contact_support</span>
+                                </div>
+                                <div>
+                                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Kontak & Dukungan</h2>
+                                    <p class="text-gray-600 dark:text-gray-400">Tim kami siap membantu 24/7</p>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                                <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-soft dark:shadow-soft-dark border border-gray-100 dark:border-gray-800 text-center">
+                                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <span class="material-symbols-outlined text-primary">mail</span>
+                                    </div>
+                                    <h3 class="font-bold mb-2 text-gray-900 dark:text-white">Email</h3>
+                                    <p class="text-gray-600 dark:text-gray-400 mb-2">bantuan@tiketwisatasurabaya.com</p>
+                                    <a href="mailto:bantuan@tiketwisatasurabaya.com" class="text-primary hover:text-primary/80 text-sm font-medium">Kirim Email</a>
+                                </div>
+
+                                <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-soft dark:shadow-soft-dark border border-gray-100 dark:border-gray-800 text-center">
+                                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <span class="material-symbols-outlined text-primary">call</span>
+                                    </div>
+                                    <h3 class="font-bold mb-2 text-gray-900 dark:text-white">Telepon</h3>
+                                    <p class="text-gray-600 dark:text-gray-400 mb-2">(031) 1234-5678</p>
+                                    <p class="text-xs text-gray-500">08:00-17:00 WIB</p>
+                                </div>
+
+                                <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-soft dark:shadow-soft-dark border border-gray-100 dark:border-gray-800 text-center">
+                                    <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <span class="material-symbols-outlined text-green-600 dark:text-green-400">chat</span>
+                                    </div>
+                                    <h3 class="font-bold mb-2 text-gray-900 dark:text-white">WhatsApp</h3>
+                                    <p class="text-gray-600 dark:text-gray-400 mb-2">+62 812-3456-7890</p>
+                                    <a href="https://wa.me/6281234567890" class="text-primary hover:text-primary/80 text-sm font-medium">Chat Sekarang</a>
+                                </div>
+
+                                <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-soft dark:shadow-soft-dark border border-gray-100 dark:border-gray-800 text-center">
+                                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <span class="material-symbols-outlined text-primary">location_on</span>
+                                    </div>
+                                    <h3 class="font-bold mb-2 text-gray-900 dark:text-white">Kantor</h3>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Jl. Raya Surabaya No. 123</p>
+                                </div>
+                            </div>
+
+                            <!-- Chat Form -->
+                            <div class="bg-gradient-to-r from-primary/5 to-emerald-100/30 dark:from-gray-900 dark:to-gray-800 rounded-xl p-8 border border-gray-200 dark:border-gray-800">
+                                <h3 class="text-xl font-bold mb-6 text-gray-900 dark:text-white">Masih Ada Pertanyaan?</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Nama Lengkap</label>
+                                        <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="Masukkan nama Anda">
+                                    </div>
+                                    
+                                    <div>
+                                        <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Email</label>
+                                        <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="email@contoh.com">
+                                    </div>
+                                    
+                                    <div class="md:col-span-2">
+                                        <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Pesan</label>
+                                        <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="Tulis pertanyaan atau masalah Anda..."></textarea>
+                                    </div>
+                                    
+                                    <div class="md:col-span-2">
+                                        <button type="button" class="w-full bg-primary text-white py-3 rounded-lg font-bold hover:bg-primary/90 transition-colors shadow-md hover:shadow-lg">
+                                            Kirim Pesan Bantuan
+                                        </button>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400 text-center mt-3">Tim kami akan membalas dalam 1x24 jam</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-auto border-t border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900/50">
+            <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+                    <!-- Company -->
+                    <div>
+                        <h4 class="font-bold text-gray-900 dark:text-white">Perusahaan</h4>
+                        <ul class="mt-4 space-y-2 text-sm">
+                            <li><a class="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="#">Tentang Kami</a></li>
+                            <li><a class="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="#">Karir</a></li>
+                            <li><a class="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="#">Pers</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Support -->
+                    <div>
+                        <h4 class="font-bold text-gray-900 dark:text-white">Dukungan</h4>
+                        <ul class="mt-4 space-y-2 text-sm">
+                            <li><a class="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="bantuan.html">Pusat Bantuan</a></li>
+                            <li><a class="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="#kontak">Hubungi Kami</a></li>
+                            <li><a class="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Legal -->
+                    <div>
+                        <h4 class="font-bold text-gray-900 dark:text-white">Hukum</h4>
+                        <ul class="mt-4 space-y-2 text-sm">
+                            <li><a class="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="#">Ketentuan Layanan</a></li>
+                            <li><a class="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="#">Kebijakan Privasi</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Brand -->
+                    <div>
+                        <div class="flex items-center gap-4 text-gray-900 dark:text-white">
+                            <img src="gambar/logoo.png" width="120" height="40" alt="Logo">
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-4">Platform pemesanan tiket wisata Surabaya terpercaya.</p>
+                    </div>
+                </div>
+                
+                <!-- Copyright -->
+                <div class="mt-8 border-t border-gray-200 pt-8 text-center text-sm text-gray-500 dark:border-gray-800 dark:text-gray-400">
+                    <p>© 2025 IMK-D Kelompok 2. Tiket Wisata Surabaya.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // FAQ Toggle Script
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.closest('.faq-item');
+                item.classList.toggle('active');
+            });
+        });
+
+        // Smooth scroll untuk anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update URL tanpa reload
+                    history.pushState(null, null, targetId);
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('button[type="button"]')?.addEventListener('click', function() {
+            alert('Terima kasih! Pesan bantuan Anda telah dikirim. Tim kami akan menghubungi Anda dalam 1x24 jam.');
+            
+            // Reset form
+            const form = this.closest('.bg-gradient-to-r');
+            form.querySelectorAll('input, textarea').forEach(input => {
+                input.value = '';
+            });
+        });
+
+        // Highlight active sidebar item on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if(scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('bg-primary-light', 'dark:bg-gray-800', 'text-primary');
+                link.classList.add('text-gray-700', 'dark:text-gray-300');
+                if(link.getAttribute('href').substring(1) === current) {
+                    link.classList.remove('text-gray-700', 'dark:text-gray-300');
+                    link.classList.add('bg-primary-light', 'dark:bg-gray-800', 'text-primary');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
